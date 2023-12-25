@@ -11,7 +11,7 @@ import { GithubService } from '../github.service';
 })
 export class PersonalInfoComponent implements OnInit {
 
-  user$: Observable<User> | undefined
+  user$: Observable<User> | undefined;
 
   constructor(private gitHubService: GithubService) { }
 
