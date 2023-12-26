@@ -6,6 +6,7 @@ import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { PanelComponent } from './panel/panel.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { OrganizationComponent } from './organization/organization.component';
+import { TransferHttpCacheModule } from '@nguniversal/common';
 
 @NgModule({
   declarations: [
@@ -16,8 +17,9 @@ import { OrganizationComponent } from './organization/organization.component';
     OrganizationComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
+    TransferHttpCacheModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
